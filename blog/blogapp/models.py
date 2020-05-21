@@ -5,4 +5,10 @@ class Wpis(models.Model):
     tytul = models.CharField(max_length=100)
     tresc = models.CharField(max_length=140)
     gram = models.IntegerField()
-    objects = models.Manager()
+    data = models.DateTimeField()
+
+    def __str__(self):
+        return str(self.data)
+
+    class Meta:
+        ordering = ['-data']
