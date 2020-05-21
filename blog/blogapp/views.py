@@ -18,7 +18,7 @@ def generateend(request):
         gram = formularz.cleaned_data['gram']
         if gram == 1:
             tekst = " ".join(ngramy1.unigram())
-            if len(tekst.split('.'))<1:
+            if len(tekst.split(' '))<10:
                 return render(request, 'generateend.html', {'message': "Wygenerowany ngram jest za krótki, spróbuj ponownie!", 'type': "error"})
             title = tekst.split('.')[0]+'.'
             Wpis.objects.create(tytul=title,
@@ -28,7 +28,7 @@ def generateend(request):
             return render(request, 'generateend.html', {'message': "Pomyślnie wygenerowano!", 'type': "ok"})
         elif gram == 2:
             tekst = " ".join(ngramy1.bigram(start_phrase))
-            if len(tekst.split('.'))<1:
+            if len(tekst.split(' '))<10:
                 return render(request, 'generateend.html', {'message': "Wygenerowany ngram jest za krótki, spróbuj ponownie!", 'type': "error"})
             title = tekst.split('.')[0]+'.'
             Wpis.objects.create(tytul=title,
@@ -38,7 +38,7 @@ def generateend(request):
             return render(request, 'generateend.html', {'message': "Pomyślnie wygenerowano!", 'type': "ok"})
         elif gram == 3:
             tekst = " ".join(ngramy1.gram3(start_phrase))
-            if len(tekst.split('.'))<1:
+            if len(tekst.split(' '))<10:
                 return render(request, 'generateend.html', {'message': "Wygenerowany ngram jest za krótki, spróbuj ponownie!", 'type': "error"})
             title = tekst.split('.')[0]+'.'
             Wpis.objects.create(tytul=title,
@@ -48,7 +48,7 @@ def generateend(request):
             return render(request, 'generateend.html', {'message': "Pomyślnie wygenerowano!", 'type': "ok"})
         elif gram == 4:
             tekst = " ".join(ngramy1.gram4(start_phrase))
-            if len(tekst.split('.'))<1:
+            if len(tekst.split(' '))<10:
                 return render(request, 'generateend.html', {'message': "Wygenerowany ngram jest za krótki, spróbuj ponownie!", 'type': "error"})
             title = tekst.split('.')[0]+'.'
             Wpis.objects.create(tytul=title,
