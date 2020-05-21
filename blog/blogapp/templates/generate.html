@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Wygeneruj nowy post</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
@@ -17,15 +17,26 @@
             crossorigin="anonymous"></script>
 
 </head>
-<body>
-
-    <form method="post" action="http://localhost:8000/generateend">
-        {% csrf_token %}
-        {{ form.as_p }}
-        
+<body style="background-color: #3ab9bc;">
+    
+    <div class="container" style = "background-color: #29a8ab; border-radius: 10px; width: 1000px; position: relative;">
         <br>
-        <input type="submit">
-    </form>
-
+        <div class="container" style="border-radius: 10px; background-color: #dddddd; position: relative;">    
+            <br><h1 style="text-align: center;"><a href="http://localhost:8000/" style="color: #29a8ab; text-decoration: none; " >Wróć</a></h1><br>
+        </div>
+        <br>
+        <div class="container" style="background-color: #dddddd; border-radius: 10px; position: relative; text-align: center;">
+            <br>
+            <form method="post" action="http://localhost:8000/generateend">
+                {% csrf_token %}
+                <h4 style="color: #29a8ab;"><b>Fraza zaczynająca:</b></h4><input type="text" style="border-radius: 5px; color: black;" id="start" name="start" value="It was a"><br>
+                <h4 style="color: #29a8ab;"><b>Typ ngramu:</b></h4><input type="number" style="border-radius: 5px; color: black;" id="gram" name="gram" value="1" max="4" min="1"><br>
+                <br><input type="submit" style = "border-radius: 5px; color: #ffffff; background-color: #29a8ab; outline: #3ab9bc;"><br>
+            </form>
+            <br>
+        </div>
+        <br>
+    </div>
+    <br>
 </body>
 </html>

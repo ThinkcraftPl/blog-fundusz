@@ -17,10 +17,42 @@
             crossorigin="anonymous"></script>
 
 </head>
-<body>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 
-    {{message}} <br>
-    <a href="http://localhost:8000/generate">Powrót</a><br>
-    <a href="http://localhost:8000/">Posty</a><br>
+<body style="background-color: #3ab9bc; align-content: center;">
+        <div class="container" style = "background-color: #29a8ab; border-radius: 10px; width: 1000px; position: relative; align-self: center; align-content: center;">
+                <br>
+                <div class="container" style="border-radius: 10px; background-color: #dddddd; position: relative;">    
+                <br><h1 style="text-align: center;"><a href="http://localhost:8000/" style="color: #29a8ab; text-decoration: none; " >Wróć</a></h1><br>
+                </div>
+                <br>
+        </div>
+        <br>
+        </body>
+        <script>
+        var ikona = '';
+        var ty='';
+        if("{{type}}"=="error")
+        {
+                ty = 'Wystąpił błąd!';
+                ikona = 'error';
+        }
+        else if("{{type}}"=="ok")
+        {
+                ty = 'Sukces!';
+                ikona = 'success';
+        }
+        else
+        {
+                ty = '?';
+                ikona = 'question';
+        }
+        Swal.fire({
+                title: ty,
+                text: '{{message}}',
+                icon: ikona,
+                confirmButtonText: 'Ok'
+        })
+        </script>
 </body>
 </html>
