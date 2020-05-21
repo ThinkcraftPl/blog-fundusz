@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Generate new post</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
@@ -23,7 +23,7 @@
         <div class="container" style = "background-color: #29a8ab; border-radius: 10px; width: 1000px; position: relative; align-self: center; align-content: center;">
                 <br>
                 <div class="container" style="border-radius: 10px; background-color: #dddddd; position: relative;">    
-                <br><h1 style="text-align: center;"><a href="http://localhost:8000/" style="color: #29a8ab; text-decoration: none; " >Wróć</a></h1><br>
+                <br><h1 style="text-align: center;"><a href="http://localhost:8000/" style="color: #29a8ab; text-decoration: none; " >Back</a></h1><br>
                 </div>
                 <br>
         </div>
@@ -34,12 +34,12 @@
         var ty='';
         if("{{type}}"=="error")
         {
-                ty = 'Wystąpił błąd!';
+                ty = 'Error!';
                 ikona = 'error';
         }
         else if("{{type}}"=="ok")
         {
-                ty = 'Sukces!';
+                ty = 'Success!';
                 ikona = 'success';
         }
         else

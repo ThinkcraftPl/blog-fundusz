@@ -20,14 +20,14 @@
     <div class="container" style = "background-color: #29a8ab; border-radius: 10px; width: 1000px; position: relative;">
         <br>
         <div class="container" style="border-radius: 10px; background-color: #dddddd; position: relative;">    
-            <br><h1 style="text-align: center;"><a href="http://localhost:8000/generate" style="color: #29a8ab; text-decoration: none; " >Wygeneruj nowy post</a></h1><br>
+            <br><h1 style="text-align: center;"><a href="http://localhost:8000/generate" style="color: #29a8ab; text-decoration: none; " >Generate new post</a></h1><br>
         </div>
         <br>
     {% for wpis in wpisy %}
         <div class="container" style="background-color: #dddddd; border-radius: 10px; position: relative;">
             <br>
             <h1>{{ wpis.tytul }}</h1>
-            <p>Typ ngramu: {{ wpis.gram }}.<br>Data: {{wpis.data}}</p>
+            <p>Ngram type: {{ wpis.gram }}.<br>Date: {{wpis.data}}</p>
             <h3>{{ wpis.tresc }}</h3>
             <br>
         </div>
