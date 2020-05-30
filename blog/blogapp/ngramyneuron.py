@@ -74,6 +74,7 @@ model.add(tf.keras.layers.LSTM(1024,
                               activation='tanh'))
 model.add(tf.keras.layers.Dense(dlugosc_alfabetu))
 model.summary()
+{
 model.compile(optimizer='adam', 
               loss=(
                   lambda labels, logits: 
@@ -93,3 +94,4 @@ checkpoint_callback=tf.keras.callbacks.ModelCheckpoint(
 )
 os.chdir(new_checkpoint_dir)
 model.fit(dataset, epochs=100, callbacks=[checkpoint_callback])
+}

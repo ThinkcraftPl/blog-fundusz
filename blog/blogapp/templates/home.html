@@ -27,7 +27,17 @@
         <div class="container" style="background-color: #dddddd; border-radius: 10px; position: relative;">
             <br>
             <h1>{{ wpis.tytul }}</h1>
-            <p>Ngram type: {{ wpis.gram }}.<br>Date: {{wpis.data}}</p>
+            <p>
+                <script>
+                    var text = "ERROR";
+                    if( "{{wpis.gram}}" != "0")
+                        {text = "Ngram type: "+"{{wpis.gram}}"}
+                    else
+                        {text = "Generated using neural network";}
+                    document.write(text);
+                </script><br>
+                Date: {{wpis.data}}</p>
+            
             <h3>{{ wpis.tresc }}</h3>
             <br>
         </div>

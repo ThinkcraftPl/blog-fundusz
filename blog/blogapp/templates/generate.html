@@ -30,7 +30,7 @@
             <form method="post" action="http://localhost:8000/generateend">
                 {% csrf_token %}
                 <h4 style="color: #29a8ab;"><b>Start phrase:</b></h4><input type="text" style="border-radius: 5px; color: black;" id="start" name="start" value="It was a"><br>
-                <h4 style="color: #29a8ab;"><b>Ngram type:</b></h4><input type="number" style="border-radius: 5px; color: black;" id="gram" name="gram" value="1" max="4" min="1"><br>
+                <h4 style="color: #29a8ab;"><b>Ngram type (type 0 to use neural network):</b></h4><input type="number" style="border-radius: 5px; color: black;" id="gram" name="gram" value="1" max="4" min="0"><br>
                 <br><input type="submit" style = "border-radius: 5px; color: #ffffff; background-color: #29a8ab; outline: #3ab9bc;"><br>
             </form>
             <br>
