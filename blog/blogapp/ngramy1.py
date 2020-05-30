@@ -4,7 +4,7 @@ from collections import defaultdict
 import random
 import os
 full_path = os.path.realpath(__file__)
-text=['0','1','2','3','4','5','6','7','8','9']
+text=['0','1','2','3','4','5','6','7',' ','9']
 with open(os.path.dirname(full_path)+'\\books\\'+'1342-0.txt',  'r', encoding='utf-8-sig') as plik:
   text[0] = plik.read()
 with open(os.path.dirname(full_path)+'\\books\\'+'11-0.txt', 'r', encoding = 'utf-8-sig') as plik:
@@ -21,8 +21,6 @@ with open(os.path.dirname(full_path)+'\\books\\'+'84-0.txt', 'r', encoding = 'ut
   text[6] = plik.read()
 with open(os.path.dirname(full_path)+'\\books\\'+'pg1635.txt', 'r', encoding = 'utf-8-sig') as plik:
   text[7] = plik.read()
-with open(os.path.dirname(full_path)+'\\books\\'+'pg25525.txt', 'r', encoding = 'utf-8-sig') as plik:
-  text[8] = plik.read()
 with open(os.path.dirname(full_path)+'\\books\\'+'pg844.txt', 'r', encoding = 'utf-8-sig') as plik:
   text[9] = plik.read()
 text1=text[0].split()
